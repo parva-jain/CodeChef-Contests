@@ -1,0 +1,72 @@
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+int main(){
+	ll t;
+	cin>>t;
+	while(t--){
+		ll n;
+		cin>>n;
+		string s;
+		cin>>s;
+		string temp="";
+		
+		for(int i=0;i<n;i+=4){
+			string res="";
+			res+=s[i];
+			res+=s[i+1];
+			res+=s[i+2];
+			res+=s[i+3];
+			if(res=="0000"){
+				temp+="a";
+			}
+			else if(res=="0001"){
+				temp+="b";
+			}
+			else if(res=="0010"){
+				temp+="c";
+			}
+			else if(res=="0011"){
+				temp+="d";
+			}
+			else if(res=="0100"){
+				temp+="e";
+			}
+			else if(res=="0101"){
+				temp+="f";
+			}
+			else if(res=="0110"){
+				temp+="g";
+			}
+			else if(res=="0111"){
+				temp+="h";
+			}
+			else if(res=="1000"){
+				temp+="i";
+			}
+			else if(res=="1001"){
+				temp+="j";
+			}
+			else if(res=="1010"){
+				temp+="k";
+			}
+			else if(res=="1011"){
+				temp+="l";
+			}
+			else if(res=="1100"){
+				temp+="m";
+			}
+			else if(res=="1101"){
+				temp+="n";
+			}
+			else if(res=="1110"){
+				temp+="o";
+			}
+			else if(res=="1111"){
+				temp+="p";
+		}
+		}
+		cout<<temp<<endl;	
+	}
+	return 0;
+}
