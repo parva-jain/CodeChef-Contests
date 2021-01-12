@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+int main(){
+	ll t;
+	cin>>t;
+	while(t--){
+		ll n,k,d;
+		cin>>n>>k>>d;
+		ll a[n];
+		ll sum=0;
+		for(int i=0;i<n;i++){
+			cin>>a[i];
+			sum+=a[i];
+		}
+		ll x = sum/k;
+		if(x==d){
+		    cout<<x<<endl;
+		}
+		else if(x>d){
+		    cout<<d<<endl;
+		}
+		else{
+		    cout<<x<<endl;
+		}
+	}
+	return 0;
+}
