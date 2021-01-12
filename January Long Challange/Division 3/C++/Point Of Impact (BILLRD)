@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+#define ll long long
+using namespace std;
+
+int main() {
+	ll t;
+	cin>>t;
+	while(t--){
+	    ll n,k,x,y;
+	    cin>>n>>k>>x>>y;
+	    
+	    if(x==y){
+	        cout<<n<<" "<<n<<endl;
+	    }
+	    else{
+	        map<int , pair<int,int>>a;
+	        if(x<y){
+	            swap(x,y);
+	            a[1]={n-x+y,n};
+	            a[2]={n,n-x+y};
+	            a[3]={x-y,0};
+	            a[4]={0,x-y};
+	        }
+	        else{
+	            a[1]={n,n-x+y};
+	            a[2]={n-x+y,n};
+	            a[3]={0,x-y};
+	            a[4]={x-y,0};
+	        }
+	        int ans = ((k-1)%4)+1;
+	        cout<<a[ans].first<<" "<<a[ans].second<<endl;
+	    }
+	}
+	return 0;
+}
